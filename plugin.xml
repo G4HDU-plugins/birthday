@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e107Plugin name="Birthday Menu" lan="BIRTHDAY_P05" version="3.0.1" date="2015-11-10" compatibility="2.0" installRequired="true" >
+	<author name="Barry Keal G4HDU" url="http://e107.keal.me.uk" />
+	<summary>BIRTHDAY_P05</summary>
+	<description lan="BIRTHDAY_P04">Birthday Menu. Display members' birthdays and send them a greeting on the day.</description>
+	<depends>
+	    <PHP name='core' min_version='5.2' />
+	    <MySQL name='server' min_version='5' />
+    </depends>
+	<category>users</category>
+	<keywords>
+		<word>birthday</word>
+		<word>greeting</word>
+	</keywords>
+	<adminLinks>
+		<link url='admin_config.php' description='Configure Birthday Menu' icon='images/birthday_32.png' iconSmall='images/birthday_16.png' primary='true' >LAN_CONGIGURE</link>
+	</adminLinks>
+
+	<pluginPrefs>
+		<pref name="birthday_numdue">3</pref>
+		<pref name="birthday_dformat">1</pref>
+		<pref name="birthday_subject">Happy Birthday</pref>
+		<pref name="birthday_greeting">'Dear {BIRTHDAY_MEMBER}
+
+			Just to wish you a very happy birthday. What is it like being {BIRTHDAY_AGE} now. Time soon moves along.
+
+			Enjoy your day
+
+			Admin'</pref>
+		<pref name="birthday_emailfrom">sysop</pref>
+		<pref name="birthday_emailaddr">you@example.com</pref>
+		<pref name="birthday_lastemail">0</pref>
+		<pref name="birthday_linkUser">0</pref>
+		<pref name="birthday_showAge">0</pref>
+		<pref name="birthday_showAvatar">0</pref>
+		<pref name="birthday_showclass">255</pref>
+		<pref name="birthday_includeclass">253</pref>
+		<pref name="birthday_excludeclass">255</pref>
+		<pref name="birthday_statsclass">255</pref>
+		<pref name="birthday_sendEmail">0</pref>
+		<pref name="birthday_sendpm">0</pref>
+		<pref name="birthday_pmfrom">0</pref>
+		<pref name="birthday_usecss">0</pref>
+		<pref name="birthday_showAvatar">1</pref>
+		<pref name="birthday_avwidth">25</pref>
+		<pref name="birthday_dayRun">-1</pref>
+		<pref name="birthdaysToday"></pref>
+		<pref name="birthdayComing"></pref>
+		<pref name="birthdayIsToday"></pref>
+		<pref name="birthdayUpComing"></pref>
+		<pref name="e_remote">https://raw.githubusercontent.com/G4HDU/birthday/master/plugin.xml</pref>
+		<pref name="e_update">0</pref>
+		<pref name="e_version">0.0.0</pref>
+	</pluginPrefs>
+	<userClasses>
+		<class name="Birthday Menu" description="Birthday Menu View Class" />
+		<class name="Birthday Include" description="Birthday Include Class" />
+		<class name="Birthday Exclude" description="Birthday Exclude Class" />
+	</userClasses>
+	<extendedFields>
+	</extendedFields>
+</e107Plugin>

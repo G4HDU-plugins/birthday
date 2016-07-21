@@ -1,0 +1,21 @@
+Add this to admin_config.php near to the top just after load any classes and after perms check
+
+require_once ("e_version.php");
+
+ 
+Add this to admin_config.php at the end 
+
+/**
+ * e_help()
+ * 
+ * @return
+ */
+
+function e_help()
+{
+
+    $helpArray = e_version::genUpdate('auto_assign2');
+
+
+    return $helpArray;
+}
