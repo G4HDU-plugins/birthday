@@ -77,6 +77,7 @@ class e_version
      */
     static private function updateAvailable($plugName)
     {
+		return;
         if (self::$prefs['e_update'] != date('z'))
         {
             $url = (string )self::$prefs['e_remote'];
@@ -122,7 +123,7 @@ class e_version
      */
     static function genUpdate($plugName)
     {
-
+return;
         self::$prefs = e107::getPlugPref($plugName);
 
         $github = str_replace('/master/plugin.xml', '', self::$prefs['e_remote']);
